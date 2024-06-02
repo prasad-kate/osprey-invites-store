@@ -12,7 +12,7 @@ function CrestCard({ activeCard, img, variant, price }) {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center border cursor-pointer rounded-md overflow-hidden transition-all duration-150 ease-in 
+      className={`flex flex-col justify-between items-center border cursor-pointer rounded-md overflow-hidden transition-all duration-150 ease-in
       ${
         activeCard === price
           ? "border-[#92711b] border-2"
@@ -36,10 +36,15 @@ function CrestCard({ activeCard, img, variant, price }) {
         }
       }}
     >
-      <div className="flex items-center justify-center min-h-[100px]">
-        <Image src={img} alt="crest" width={90} height={90} />
+      <div className="flex items-center justify-center md:min-h-[150px] aspect-square flex-1">
+        <Image
+          src={img}
+          alt="crest"
+          width={variant === "illustrations" ? 75 : 90}
+          height={variant === "illustrations" ? 75 : 90}
+        />
       </div>
-      <div className="bg-[#efe4c6] text-[#92711b] text-sm w-full text-center py-1">
+      <div className="bg-[#efe4c6] text-[#92711b] text-xs md:text-sm w-full text-center py-[2px] md:py-1">
         {formatToIndianCurrency(+price, true)}
       </div>
     </div>

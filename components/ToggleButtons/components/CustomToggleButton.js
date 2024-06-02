@@ -9,7 +9,7 @@ function CustomToggleButton({ text, activeNoOfPieces, pieces }) {
   return (
     <div
       className={`
-      px-3 py-1 rounded-sm text-[#92711b] cursor-pointer transition-all duration-200 ease-in
+      px-2 py-1 rounded-sm text-[#92711b] cursor-pointer transition-all duration-200 ease-in text-nowrap
       border ${isActive ? "border-[#efe4c6]" : "border-[#92711b]"}
       bg-[${isActive ? "#efe4c6" : "red"}]
       `}

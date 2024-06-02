@@ -1,10 +1,10 @@
 "use client";
 
+import { formatToIndianCurrency } from "@/lib/utils";
 import { Upload } from "lucide-react";
 import { useSelector } from "react-redux";
 import CrestCard from "./WeddingCrest/components/CrestCard";
 import GlobalAccordion from "./components/Accordion";
-import { formatToIndianCurrency } from "@/lib/utils";
 
 function DigitalIllustration() {
   const { noOfIllustrations } = useSelector((state) => state.product);
@@ -25,21 +25,24 @@ function DigitalIllustration() {
           );
         })}
       </div>
-      <div className="flex items-center justify-between border border-[#e6e6e6] rounded-sm text-[#9195a4] overflow-hidden">
-        <div className="p-3">
-          <div className="text-[#92711b] text-lg text-nowrap">
+      <div className="flex items-center justify-between border border-[#e6e6e6] bg-[#e2e2e2] text-[#9195a4] rounded-sm overflow-hidden">
+        <div className="p-3 bg-[white] flex-1">
+          <div className="text-[#92711b] text-sm md:text-lg text-nowrap">
             Personalise illustrations
           </div>
-          <div className="text-[#92711b] font-bold text-xl">
+          <div className="text-[#92711b] font-bold text-sm md:text-lg">
             {formatToIndianCurrency(3000)}/-{" "}
-            <span className="text-[#9195a4] font-normal text-sm">
+            <span className="text-[#9195a4] font-normal text-xs md:text-sm">
               (add your own face)
             </span>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-1 bg-[#e2e2e2] text-[#9195a4] p-4 h-full">
+        <div
+          className="flex flex-col items-center justify-center gap-1 p-2 md:px-8 text-[#9195a4] cursor-pointer"
+          title="Uploads will be available soon!"
+        >
           <Upload />
-          <div className="text-nowrap">upload your face</div>
+          <div className="text-center">upload your face</div>
         </div>
       </div>
     </GlobalAccordion>

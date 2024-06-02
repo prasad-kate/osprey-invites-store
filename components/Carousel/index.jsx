@@ -20,7 +20,7 @@ function GlobalCarousel() {
   return (
     <>
       <div className="flex items-center justify-center">
-        <Carousel className="w-full max-w-xs">
+        <Carousel className="w-full max-w-[250px] md:max-w-[300px] xl:max-w-[650px]">
           <CarouselContent>
             {carouselImages.map((item, index) => (
               <CarouselItem key={index}>
@@ -29,8 +29,8 @@ function GlobalCarousel() {
                     <Image
                       src={item?.img}
                       alt="carousel-img"
-                      width={350}
-                      height={200}
+                      width={650}
+                      height={650}
                     />
                   </CardContent>
                 </Card>
@@ -47,7 +47,10 @@ function GlobalCarousel() {
       <div className="flex flex-col items-center justify-center gap-2">
         <div className="flex items-center gap-4">
           <div className="text-[#be3455] font-bold text-xl">Rs 2000/-</div>
-          <div className="border border-[#b79234] px-3 py-1 rounded-sm text-sm text-[#b79234] cursor-pointer">
+          <div
+            className="border border-[#b79234] px-3 py-1 rounded-sm text-sm text-[#b79234] cursor-pointer"
+            title="Offers will be available soon!"
+          >
             % Offers
           </div>
         </div>

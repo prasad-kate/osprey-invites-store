@@ -10,8 +10,8 @@ import WeddingCrest from "@/components/Accordions/WeddingCrest";
 import CartSection from "@/components/AddToCart/CartSection";
 import Carousel from "@/components/Carousel";
 import ToggleButtons from "@/components/ToggleButtons";
-import store from "../store/store";
 import { Provider } from "react-redux";
+import store from "../store/store";
 
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
           <Carousel />
         </div>
 
-        <div className="custom-scrollbar md:overflow-y-auto md:h-[800px] md:px-3 md:pb-6 md:relative">
+        <div className="custom-scrollbar md:overflow-y-auto md:h-[1000px] lg:h-[650px] md:px-3 md:pb-6">
           {/* qty section */}
           <ToggleButtons />
 
@@ -41,8 +41,8 @@ function Home() {
           <InputExampleDetails />
 
           {/* cart section*/}
-          <CartSection />
         </div>
+        <CartSection />
       </main>
     </Provider>
   );
