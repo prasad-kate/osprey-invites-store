@@ -1,0 +1,7 @@
+pale yellow = #efe4c6
+brown = #92711b
+yellow = #b79234
+pink = #be3455
+text grey = #9195a4
+
+cart top ribbon = #b79234
